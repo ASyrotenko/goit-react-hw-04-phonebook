@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './contact-list.module.css';
 import { ReactComponent as DeleteIcon } from '../icons/delete.svg';
