@@ -13,14 +13,9 @@ const initialContacts = JSON.parse(localStorage.getItem('contacts'));
 export default function App() {
   const [contacts, setContacts] = useState(initialContacts || []);
   const [filter, setFilter] = useState('');
-  const [didMount, setDidMount] = useState(false);
 
   useEffect(() => {
-    if (didMount) {
-      localStorage.setItem('contacts', JSON.stringify(contacts));
-    } else {
-      setDidMount(true);
-    }
+    localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const addContact = (name, number) => {
